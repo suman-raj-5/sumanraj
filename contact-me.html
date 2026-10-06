@@ -11,14 +11,23 @@
     <p>myemail@gmail.com</p>
     <hr size="3" noshade>
     <form action="mailto:info@londonappbrewery.com" method="post" enctype="text/plain">
-      <label>Your Name:</label>
-      <input type="text" name="YourName" value=""><br>
+      <label>First Name:</label>
+      <input type="text" name="first name" value=""><br>
+      <br>
+      <label>Last Name:</label>
+      <input type="text" name="last name" value=""><br>
       <br>
       <label>Your Email:</label>
       <input type="email" name="YourEmail" value=""><br>
       <br>
       <label>Your Message:</label><br>
       <textarea name="YourMessage" rows="10" cols="80"></textarea><br>
+      <p id="message-count">0 characters</p>
+      <script>
+        function updateMessageCount(message) {
+          document.getElementById("message-count").textContent = message.length + " characters";
+        }
+      </script>
       <input type="submit" name=""><br>
       <br>
       <input type="file" name="" value=""><br>
